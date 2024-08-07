@@ -1,12 +1,12 @@
 import React from 'react'
 import Button from './Button'
 
-const ToDo = (props) => {
+const ToDo = ({ addTarea }) => {
   return (
     <div className="todo-container">
-      <Button props="ejemplo" onClick={() => setTareas([...tareas, listaTareas])} />
-      <Button />
-      <Button />
+      <Button onClick={() => addTarea('Pasear los perros! 🐶🐶')}>Pasear los perros! 🐶🐶</Button>
+      <Button onClick={() => addTarea('Cocinar 🍳')}>Cocinar 🍳</Button>
+      <Button onClick={() => addTarea('Hacer alguna tarea de React 🧪')}>Hacer alguna tarea de React 🧪</Button>
     </div>
   )
 }

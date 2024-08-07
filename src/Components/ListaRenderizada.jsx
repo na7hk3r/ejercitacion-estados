@@ -1,11 +1,14 @@
-import { useState } from 'react'
-
-const ListaRenderizada = () => {
-    const [tareas, setTareas] = useState([]);
+import '../App.css';
+const ListaRenderizada = ({ tareas }) => {
+    
   return (
-    <div>
+    <div className="lista-container">
         <h1>Lista de Tareas</h1>
-        <p>{tareas}</p>
+        <ul>
+        {tareas.map((tarea, index) => (
+          <li key={index}>{tarea}</li>
+        ))}
+      </ul>
     </div>
 
   )
